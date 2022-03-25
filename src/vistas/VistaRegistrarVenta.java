@@ -517,7 +517,7 @@ public class VistaRegistrarVenta extends javax.swing.JFrame implements IVistaReg
             int cantidad = Integer.parseInt(jTextField1.getText());
             presentador.agregarLineaDeVenta(codigobarra, talle, color, cantidad);
         } catch(Exception e) {
-            mostrarMensaje("Error en uno de los campos");
+            mostrarMensaje("Error en uno de los camposo no hay stock suficiente");
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -705,6 +705,7 @@ public class VistaRegistrarVenta extends javax.swing.JFrame implements IVistaReg
     public void reserTalleYColor() {
         jComboBox3.removeAllItems();
         jComboBox4.removeAllItems();
+        jTextField1.setText("");
     }
 
     @Override
