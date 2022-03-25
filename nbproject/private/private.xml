@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioStock.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/presentador/PresentadorAltaProducto.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioPorcentajeIVA.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioSesion.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/vistas/VistaRegistrarVenta.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/presentador/interfaces/IVistaAltaProducto.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/principal/principal.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/presentador/interfaces/IVistaRegistrarVenta.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/presentador/PresentadorRegistrarVenta.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/servicioAFIP/ServicioAFIP.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioVenta.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/Conexion.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioEmpleado.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/modelo/Sesion.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/vistas/VistaAltaProducto.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/datos/RepositorioProducto.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/modelo/Comprobante.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/modelo/PuntoDeVenta.java</file>
+            <file>file:/D:/Facultad/4º%20año/Ing%20de%20Software/TFI/ISTP01/src/presentador/PresentadorAutenticacion.java</file>
+        </group>
+    </open-files>
+</project-private>
