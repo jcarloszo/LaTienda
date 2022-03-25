@@ -10,6 +10,7 @@ import modelo.Color;
 import modelo.Marca;
 import modelo.PorcentajeIVA;
 import modelo.Rubro;
+import modelo.Stock;
 import modelo.Talle;
 
 /**
@@ -25,5 +26,7 @@ public interface IVistaAltaProducto {
     public void mostrarMje(String mje);
 
     public void limpiar();
+
+    public void mostrarStock(List<Stock> stocks);
     
 }

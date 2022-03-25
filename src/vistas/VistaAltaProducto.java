@@ -13,6 +13,7 @@ import javax.swing.table.DefaultTableModel;
 import modelo.Marca;
 import modelo.PorcentajeIVA;
 import modelo.Rubro;
+import modelo.Stock;
 import modelo.Talle;
 import presentador.PresentadorAltaProducto;
 import presentador.interfaces.IVistaAltaProducto;
@@ -148,6 +149,11 @@ public class VistaAltaProducto extends javax.swing.JFrame implements IVistaAltaP
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -321,7 +327,6 @@ public class VistaAltaProducto extends javax.swing.JFrame implements IVistaAltaP
         String color = jComboBox4.getSelectedItem().toString();
         String talle = jComboBox5.getSelectedItem().toString();
         presentador.agregarStock(color, talle);
-        agregarFila(color, talle);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -343,6 +348,14 @@ public class VistaAltaProducto extends javax.swing.JFrame implements IVistaAltaP
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        int fila = jTable1.getSelectedRow();
+        String color = (String) jTable1.getValueAt(fila, 0);
+        String talle = (String) jTable1.getValueAt(fila, 1);
+        presentador.eliminarStock(color, talle);
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -432,10 +445,7 @@ public class VistaAltaProducto extends javax.swing.JFrame implements IVistaAltaP
         for(Talle t : talles) jComboBox5.addItem(t.getDescripcion());
     }
 
-    private void agregarFila(String color, String talle) {
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.addRow(new Object[]{color, talle});
-    }
+    
 
     @Override
     public void mostrarMje(String mje) {
@@ -456,6 +466,22 @@ public class VistaAltaProducto extends javax.swing.JFrame implements IVistaAltaP
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("Color");
         model.addColumn("Talle");
+        jTable1.setModel(model);
+    }
+
+    @Override
+    public void mostrarStock(List<Stock> stocks) {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Color");
+        model.addColumn("Talle");
+        
+        for(Stock s : stocks){
+            model.addRow(new Object[]{
+                s.getColor().getDescripcion(),
+                s.getTalle().getDescripcion()
+            });        
+        }
+        
         jTable1.setModel(model);
     }
 }

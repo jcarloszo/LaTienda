@@ -46,14 +46,39 @@ public class PresentadorAltaProducto {
     }
 
     public void agregarStock(String color, String talle) {
-        Color c = getColor(color);
-        Talle t = getTalle(talle);
-        Stock s = new Stock();
-        s.setColor(c);
-        s.setTalle(t);
-        stocks.add(s);
+        boolean agregado = false;
+        
+        for(Stock s : stocks){
+            if(s.getColor().getDescripcion().equals(color) && s.getTalle().getDescripcion().equals(talle)){
+                agregado = true;
+                break;
+            }
+        }
+        
+        if(!agregado){
+            Color c = getColor(color);
+            Talle t = getTalle(talle);
+            Stock s = new Stock();
+            s.setColor(c);
+            s.setTalle(t);
+            stocks.add(s);
+            vista.mostrarStock(stocks);
+        } else {
+            vista.mostrarMje("Ya ha agregado la combinacion a la lista");
+        }  
     }
 
+    public void eliminarStock(String color, String talle){
+        for(int i = 0; i < stocks.size(); i++){
+            Stock s = stocks.get(i);
+            if(s.getColor().getDescripcion().equals(color) && s.getTalle().getDescripcion().equals(talle)){
+                stocks.remove(i);
+                break;
+            }
+        }
+        vista.mostrarStock(stocks);
+    }
+    
     public void registrarProducto(String codigobarra, String descripcion, double costo, double margenganancia, String rubro, String marca, double valor) {
         boolean validacion = codigobarra.equals("") || descripcion.equals("") || costo <= 0 || margenganancia <=0 || stocks.size() < 1;
                 
